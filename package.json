@@ -1,0 +1,25 @@
+{
+  "name": "typescript-library-starter",
+  "version": "1.0.0",
+  "description": "",
+  "browser": "./lib/cjs/index.js",
+  "main": "./lib/umd/index.js",
+  "module": "./lib/esm/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json && tsc -p tsconfig.module.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zbarbuto/typescript-library-starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zbarbuto/typescript-library-starter/issues"
+  },
+  "homepage": "https://github.com/zbarbuto/typescript-library-starter#readme",
+  "devDependencies": {
+    "typescript": "^4.0.2"
+  }
+}
