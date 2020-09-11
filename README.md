@@ -4,6 +4,8 @@ Basic setup for creating a typescript library that publishes node and browser ve
 
 Tested in a node.js project (node 12) and an Angular (webpack) project.
 
+It also builds a rollup bundle for `<script>` tags
+
 **Build**
 
 - `npm install`

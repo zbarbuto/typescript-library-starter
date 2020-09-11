@@ -7,7 +7,12 @@
   "main": "./lib/umd/index.js",
   "module": "./lib/esm/index.js",
   "scripts": {
-    "build": "tsc -p tsconfig.json --emitDeclarationOnly && tsc -p tsconfig.esm.json && tsc -p tsconfig.umd.json"
+    "build": "npm run build:types && npm run build:esm && npm run build:umd && npm run rollup",
+    "build:types": "tsc -p tsconfig.json --emitDeclarationOnly",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:umd": "tsc -p tsconfig.umd.json",
+    "rollup:alt": "rollup lib/esm/index.js --file lib/bundle.js --format iife --name MyLibrary",
+    "rollup": "rollup lib/esm/index.js --file lib/bundle.all.js --format umd --name MyLibrary"
   },
   "repository": {
     "type": "git",
@@ -21,6 +26,10 @@
   },
   "homepage": "https://github.com/zbarbuto/typescript-library-starter#readme",
   "devDependencies": {
+    "rollup": "^2.26.11",
     "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "date-fns": "^2.16.1"
   }
 }

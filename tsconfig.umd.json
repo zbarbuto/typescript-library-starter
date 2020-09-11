@@ -3,6 +3,7 @@
   "compilerOptions": {
     "declaration": false,
     "module": "UMD",
+    "moduleResolution": "node",
     "outDir": "./lib/umd"
   }
 }
